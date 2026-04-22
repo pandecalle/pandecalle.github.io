@@ -8,85 +8,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+* { box-sizing:border-box; margin:0; padding:0; }
 
-body{
+body {
   font-family:'Poppins',sans-serif;
   background:#f6f2ea;
   color:#2b2b2b;
   line-height:1.6;
 }
 
-h1,h2,h3{
-  font-weight:600;
-  letter-spacing:-0.5px;
-}
+h1,h2,h3 { font-weight:600; letter-spacing:-0.5px; }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
+.container { max-width:1100px; margin:auto; padding:20px; }
 
 /* HERO */
-.hero{
+.hero {
   height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
   text-align:center;
-  background:
-    linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5)),
-    url('123.jpg');
+  background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5)), url('123.jpg');
   background-size:cover;
   background-position:center;
   color:#fff;
 }
 
-/* LOGO RESPONSIVO */
 .hero-logo {
-  width: 150px; /* tamaño en PC */
-  height: auto;
-  margin-bottom: 20px;
+  width:150px;
+  height:auto;
+  margin-bottom:20px;
 }
 
 @media (max-width: 768px) {
-  .hero-logo {
-    width: 60%;
-    max-width: 200px;
-    margin-bottom: 15px;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
+  .hero-logo { width:60%; max-width:200px; margin-bottom:15px; }
+  .hero h1 { font-size:36px; }
+  .hero p { font-size:16px; }
 }
 
 @media (max-width: 480px) {
-  .hero-logo {
-    width: 80%;
-    max-width: 180px;
-  }
+  .hero-logo { width:80%; max-width:180px; }
 }
 
-.hero h1{
-  font-size:56px;
-  margin-bottom:10px;
-}
-
-.hero p{
-  margin-bottom:25px;
-  opacity:.9;
-  font-size:18px;
-}
+.hero h1 { font-size:56px; margin-bottom:10px; }
+.hero p { margin-bottom:25px; opacity:.9; font-size:18px; }
 
 /* BOTÓN */
-.btn{
+.btn {
   padding:14px 28px;
   border-radius:40px;
   background:#c89b3c;
@@ -95,32 +64,19 @@ h1,h2,h3{
   font-weight:600;
   transition:all .3s ease;
 }
-
-.btn:hover{
-  background:#b5892f;
-  transform:translateY(-2px);
-}
+.btn:hover { background:#b5892f; transform:translateY(-2px); }
 
 /* BRAND */
-.brand{
-  padding:100px 20px;
-  text-align:center;
-}
-
-.brand p{
-  max-width:600px;
-  margin:auto;
-  font-size:17px;
-  color:#555;
-}
+.brand { padding:100px 20px; text-align:center; }
+.brand p { max-width:600px; margin:auto; font-size:17px; color:#555; }
 
 /* GRID */
-.grid{display:grid;gap:25px}
-.grid-2{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.grid-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid { display:grid; gap:25px; }
+.grid-2 { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+.grid-3 { grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
 
 /* CARD */
-.card{
+.card {
   background:#fff;
   padding:22px;
   border-radius:16px;
@@ -130,25 +86,13 @@ h1,h2,h3{
   border:1px solid rgba(0,0,0,0.05);
 }
 
-.card.show{
-  opacity:1;
-  transform:translateY(0);
-}
+.card.show { opacity:1; transform:translateY(0); }
+.card:hover { transform:translateY(-6px); box-shadow:0 10px 25px rgba(0,0,0,0.08); }
 
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.card-row{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:12px;
-  font-size:17px;
-}
+.card-row { display:flex; justify-content:space-between; margin-bottom:12px; font-size:17px; }
 
 /* BOTÓN PRODUCTO */
-.product-btn{
+.product-btn {
   margin-top:10px;
   font-size:13px;
   padding:8px 14px;
@@ -159,23 +103,14 @@ h1,h2,h3{
   transition:.3s;
   display:inline-block;
 }
-
-.product-btn:hover{
-  background:#c89b3c;
-  color:#fff;
-}
+.product-btn:hover { background:#c89b3c; color:#fff; }
 
 /* SECTION */
-.section{
-  padding:90px 20px;
-}
-
-.white{
-  background:#fff;
-}
+.section { padding:90px 20px; }
+.white { background:#fff; }
 
 /* WHATSAPP */
-.float{
+.float {
   position:fixed;
   bottom:20px;
   right:20px;
@@ -191,18 +126,10 @@ h1,h2,h3{
   text-decoration:none;
   transition:.3s;
 }
-
-.float:hover{
-  transform:scale(1.1);
-}
+.float:hover { transform:scale(1.1); }
 
 /* FOOTER */
-footer{
-  text-align:center;
-  padding:30px;
-  color:#777;
-  font-size:14px;
-}
+footer { text-align:center; padding:30px; color:#777; font-size:14px; }
 </style>
 </head>
 
@@ -223,32 +150,26 @@ footer{
 <section class="section container">
   <h2>Nuestros Panes</h2>
   <div class="grid grid-2">
-
     <div class="card">
       <div class="card-row"><span>Pan Tortuga</span><strong>$25</strong></div>
       <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Pan%20Tortuga">Pedir</a>
     </div>
-
     <div class="card">
       <div class="card-row"><span>Pan Catalán</span><strong>$25</strong></div>
       <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Pan%20Catalan">Pedir</a>
     </div>
-
     <div class="card">
       <div class="card-row"><span>Molde Lactal</span><strong>$190</strong></div>
       <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Molde%20Lactal">Pedir</a>
     </div>
-
     <div class="card">
       <div class="card-row"><span>Pan de Campo</span><strong>$190</strong></div>
       <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Pan%20de%20Campo">Pedir</a>
     </div>
-
     <div class="card">
       <div class="card-row"><span>Focaccia</span><strong>$250</strong></div>
       <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Focaccia">Pedir</a>
     </div>
-
   </div>
 </section>
 
@@ -256,25 +177,21 @@ footer{
   <div class="container">
     <h2>Especiales</h2>
     <div class="grid grid-3">
-
       <div class="card">
         <p>Pre pizzas napoletanas</p>
         <strong>$160</strong><br>
         <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Pre%20Pizza%20Napoletana">Pedir</a>
       </div>
-
       <div class="card">
         <p>Cookies</p>
         <strong>$90</strong><br>
         <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Cookies">Pedir</a>
       </div>
-
       <div class="card">
         <p>Medialunas</p>
         <strong>$70</strong><br>
         <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Medialunas">Pedir</a>
       </div>
-
     </div>
   </div>
 </section>
@@ -289,14 +206,17 @@ footer{
 
 <a href="https://wa.me/59899075881" class="float" target="_blank">💬</a>
 
-<footer>
-  © 2026 Pan de Calle
-</footer>
+<footer>© 2026 Pan de Calle</footer>
 
 <script>
 const cards = document.querySelectorAll('.card');
-
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList
+    if(entry.isIntersecting){ entry.target.classList.add('show'); }
+  });
+},{threshold:0.2});
+cards.forEach(card=> observer.observe(card));
+</script>
+
+</body>
+</html>
