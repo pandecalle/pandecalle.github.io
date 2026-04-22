@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pan de Calle</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f6f2ea;
+  color:#2b2b2b;
+  line-height:1.6;
+}
+
+h1,h2,h3{
+  font-weight:600;
+  letter-spacing:-0.5px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:
+    linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5)),
+    url('123.jpg');
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+}
+
+.hero h1{
+  font-size:56px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  margin-bottom:25px;
+  opacity:.9;
+  font-size:18px;
+}
+
+/* BOTÓN */
+.btn{
+  padding:14px 28px;
+  border-radius:40px;
+  background:#c89b3c;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition:all .3s ease;
+}
+
+.btn:hover{
+  background:#b5892f;
+  transform:translateY(-2px);
+}
+
+/* BRAND */
+.brand{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.brand p{
+  max-width:600px;
+  margin:auto;
+  font-size:17px;
+  color:#555;
+}
+
+/* GRID */
+.grid{display:grid;gap:25px}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+/* CARD */
+.card{
+  background:#fff;
+  padding:22px;
+  border-radius:16px;
+  transition:all .35s ease;
+  opacity:0;
+  transform:translateY(30px);
+  border:1px solid rgba(0,0,0,0.05);
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card-row{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:12px;
+  font-size:17px;
+}
+
+/* BOTÓN PRODUCTO */
+.product-btn{
+  margin-top:10px;
+  font-size:13px;
+  padding:8px 14px;
+  background:#f3e4c8;
+  color:#7a5a1c;
+  border-radius:20px;
+  text-decoration:none;
+  transition:.3s;
+  display:inline-block;
+}
+
+.product-btn:hover{
+  background:#c89b3c;
+  color:#fff;
+}
+
+/* SECTION */
+.section{
+  padding:90px 20px;
+}
+
+.white{
+  background:#fff;
+}
+
+/* WHATSAPP */
+.float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.float:hover{
+  transform:scale(1.1);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#777;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <h1>Pan de Calle</h1>
+  <p>Pan artesanal hecho cada día, sin conservantes, con ingredientes reales</p>
+  <a class="btn" href="https://wa.me/59899075881?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank">Hacer pedido</a>
+</section>
+
+<section class="brand">
+  <h2>Nuestra esencia</h2>
+  <p>En Pan de Calle hacemos pan como antes: fermentación lenta, ingredientes reales y sabor auténtico.</p>
+</section>
+
+<section class="section container">
+  <h2>Nuestros Panes</h2>
+  <div class="grid grid-2">
+
+    <div class="card">
+      <div class="card-row"><span>Pan Tortuga</span><strong>$25</strong></div>
+      <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Pan%20Tortuga">Pedir</a>
+    </div>
+
+    <div class="card">
+      <div class="card-row"><span>Pan Catalán</span><strong>$25</strong></div>
+      <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Pan%20Catalan">Pedir</a>
+    </div>
+
+    <div class="card">
+      <div class="card-row"><span>Molde Lactal</span><strong>$190</strong></div>
+      <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Molde%20Lactal">Pedir</a>
+    </div>
+
+    <div class="card">
+      <div class="card-row"><span>Pan de Campo</span><strong>$190</strong></div>
+      <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Pan%20de%20Campo">Pedir</a>
+    </div>
+
+    <div class="card">
+      <div class="card-row"><span>Focaccia</span><strong>$250</strong></div>
+      <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Focaccia">Pedir</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section white">
+  <div class="container">
+    <h2>Especiales</h2>
+    <div class="grid grid-3">
+
+      <div class="card">
+        <p>Pre pizzas napoletanas</p>
+        <strong>$160</strong><br>
+        <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Pre%20Pizza%20Napoletana">Pedir</a>
+      </div>
+
+      <div class="card">
+        <p>Cookies</p>
+        <strong>$90</strong><br>
+        <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Cookies">Pedir</a>
+      </div>
+
+      <div class="card">
+        <p>Medialunas</p>
+        <strong>$70</strong><br>
+        <a class="product-btn" href="https://wa.me/59899075881?text=Quiero%20Medialunas">Pedir</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" style="text-align:center">
+  <h2>Pedidos</h2>
+  <p>WhatsApp: 099 075 881</p>
+  <p>Instagram: @pan_decalle</p>
+  <br>
+  <a class="btn" href="https://wa.me/59899075881" target="_blank">Ir a WhatsApp</a>
+</section>
+
+<a href="https://wa.me/59899075881" class="float" target="_blank">💬</a>
+
+<footer>
+  © 2026 Pan de Calle
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.2});
+
+cards.forEach(card=>{
+  observer.observe(card);
+});
+</script>
+
+</body>
+</html>
