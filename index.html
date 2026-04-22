@@ -45,36 +45,32 @@ h1,h2,h3{
 }
 
 /* LOGO RESPONSIVO */
-.hero::before {
-  content:"";
-  display:block;
-  width:150px;
-  height:150px;
-  background: url('123.jpg') no-repeat center/contain;
-  margin-bottom:20px;
+.hero-logo {
+  width: 150px; /* tamaño en PC */
+  height: auto;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {  /* tablets y móviles */
-  .hero::before {
-    width:60%;
-    max-width:200px;
-    height:auto;
-    margin-bottom:15px;
+@media (max-width: 768px) {
+  .hero-logo {
+    width: 60%;
+    max-width: 200px;
+    margin-bottom: 15px;
   }
 
-  .hero h1{
-    font-size:36px;      
+  .hero h1 {
+    font-size: 36px;
   }
 
-  .hero p{
-    font-size:16px;
+  .hero p {
+    font-size: 16px;
   }
 }
 
-@media (max-width: 480px) {  /* móviles pequeños */
-  .hero::before {
-    width:80%;
-    max-width:180px;
+@media (max-width: 480px) {
+  .hero-logo {
+    width: 80%;
+    max-width: 180px;
   }
 }
 
@@ -213,6 +209,7 @@ footer{
 <body>
 
 <section class="hero">
+  <img src="123.jpg" alt="Logo Pan de Calle" class="hero-logo">
   <h1>Pan de Calle</h1>
   <p>Pan artesanal hecho cada día, sin conservantes, con ingredientes reales</p>
   <a class="btn" href="https://wa.me/59899075881?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank">Hacer pedido</a>
@@ -299,4 +296,10 @@ footer{
 <script>
 const cards = document.querySelectorAll('.card');
 
-const observer = new IntersectionObserver(entries
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.2});
