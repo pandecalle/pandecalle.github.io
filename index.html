@@ -36,12 +36,20 @@ h1,h2,h3{
   justify-content:center;
   align-items:center;
   text-align:center;
-  background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5)); /* solo degradado */
+  background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5)); /* solo degradado inicial */
   color:#fff;
 }
 
+/* Fondo solo para PC */
+@media (min-width: 769px) {
+  .hero {
+    background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5)), url('123.jpg') center/cover no-repeat;
+  }
+}
+
+/* Logo */
 .hero-logo {
-  width: 250px;   
+  width: 250px;
   height: auto;
   margin-bottom: 20px;
 }
@@ -271,18 +279,4 @@ footer{
   <a class="btn" href="https://wa.me/59899075881" target="_blank">Ir a WhatsApp</a>
 </section>
 
-<a href="https://wa.me/59899075881" class="float" target="_blank">💬</a>
-
-<footer>
-  © 2026 Pan de Calle
-</footer>
-
-<script>
-const cards = document.querySelectorAll('.card');
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-},{
+<a href="https://wa.me/59899075881" class="float" target
