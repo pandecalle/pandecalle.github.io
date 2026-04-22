@@ -44,6 +44,13 @@ h1,h2,h3{
   color:#fff;
 }
 
+.hero img.logo {
+  width: 150px;          /* tamaño en PC */
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 20px;   /* centrado y espacio debajo */
+}
+
 .hero h1{
   font-size:56px;
   margin-bottom:10px;
@@ -53,6 +60,24 @@ h1,h2,h3{
   margin-bottom:25px;
   opacity:.9;
   font-size:18px;
+}
+
+/* LOGO RESPONSIVO EN MÓVILES */
+@media (max-width: 600px) {
+  .hero img.logo {
+    width: 80%;           /* se reduce en móviles */
+    max-width: 200px;
+    height: auto;
+    margin-bottom:15px;
+  }
+
+  .hero h1{
+    font-size:36px;       /* ajustar texto en móviles */
+  }
+
+  .hero p{
+    font-size:16px;
+  }
 }
 
 /* BOTÓN */
@@ -179,6 +204,7 @@ footer{
 <body>
 
 <section class="hero">
+  <img src="logo.png" alt="Pan de Calle" class="logo">
   <h1>Pan de Calle</h1>
   <p>Pan artesanal hecho cada día, sin conservantes, con ingredientes reales</p>
   <a class="btn" href="https://wa.me/59899075881?text=Hola!%20Quiero%20hacer%20un%20pedido" target="_blank">Hacer pedido</a>
@@ -256,27 +282,4 @@ footer{
   <a class="btn" href="https://wa.me/59899075881" target="_blank">Ir a WhatsApp</a>
 </section>
 
-<a href="https://wa.me/59899075881" class="float" target="_blank">💬</a>
-
-<footer>
-  © 2026 Pan de Calle
-</footer>
-
-<script>
-const cards = document.querySelectorAll('.card');
-
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-},{threshold:0.2});
-
-cards.forEach(card=>{
-  observer.observe(card);
-});
-</script>
-
-</body>
-</html>
+<a href="https://wa.me/59899075881" class="float
